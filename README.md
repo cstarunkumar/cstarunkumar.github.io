@@ -49,8 +49,8 @@ category: college # or 'self-study'
 course: COURSE_CODE
 date: YYYY-MM-DD
 tags: [tag1, tag2]
-pdf: /assets/pdf/my_note.pdf   # optional
-tex: /assets/tex/my_note.tex   # optional
+pdf: /assets/pdf/my_note.pdf # optional
+tex: /assets/tex/my_note.tex # optional
 ---
 ```
 
