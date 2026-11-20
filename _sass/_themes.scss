@@ -1,0 +1,690 @@
+// -----------------------------------------------------------------------------
+// Everforest Retro Theme Palette & Typographic Consistency for al-folio
+// -----------------------------------------------------------------------------
+
+// Light Mode: Everforest Warm Parchment
+:root,
+html[data-theme='light'] {
+  --global-bg-color: #F4F0D9;
+  --global-card-bg-color: #EFEBD4;
+  --global-code-bg-color: #E6E2CC;
+  --global-text-color: #272E33;
+  --global-text-color-light: #6F7E87;
+  --global-theme-color: #3A9474;
+  --global-hover-color: #2D7058;
+  --global-hover-text-color: #F4F0D9;
+  --global-footer-bg-color: #EFEBD4;
+  --global-footer-text-color: #272E33;
+  --global-footer-link-color: #3A9474;
+  --global-distill-app-color: #6F7E87;
+  --global-divider-color: rgba(39, 46, 51, 0.18);
+  --global-highlight-color: #E69875;
+  --global-back-to-top-bg-color: #3A9474;
+  --global-back-to-top-text-color: #F4F0D9;
+  --global-newsletter-bg-color: #EFEBD4;
+  --global-newsletter-text-color: #272E33;
+
+  --global-tip-block: #8DA101;
+  --global-tip-block-bg: #EFEBD4;
+  --global-tip-block-text: #272E33;
+  --global-tip-block-title: #8DA101;
+  --global-warning-block: #DFA000;
+  --global-warning-block-bg: #F5E9CE;
+  --global-warning-block-text: #272E33;
+  --global-warning-block-title: #DFA000;
+  --global-danger-block: #F85552;
+  --global-danger-block-bg: #F8DFDC;
+  --global-danger-block-text: #272E33;
+  --global-danger-block-title: #F85552;
+}
+
+// Dark Mode: Everforest Dark (Medium)
+html[data-theme='dark'] {
+  --global-bg-color: #2D353B;
+  --global-card-bg-color: #343F44;
+  --global-code-bg-color: #232A2E;
+  --global-text-color: #D3C6AA;
+  --global-text-color-light: #9DA9A0;
+  --global-theme-color: #A7C080;
+  --global-hover-color: #83C092;
+  --global-hover-text-color: #2D353B;
+  --global-footer-bg-color: #232A2E;
+  --global-footer-text-color: #9DA9A0;
+  --global-footer-link-color: #A7C080;
+  --global-distill-app-color: #859289;
+  --global-divider-color: rgba(211, 198, 170, 0.22);
+  --global-highlight-color: #E69875;
+  --global-back-to-top-bg-color: #A7C080;
+  --global-back-to-top-text-color: #2D353B;
+  --global-newsletter-bg-color: #343F44;
+  --global-newsletter-text-color: #D3C6AA;
+
+  --global-tip-block: #A7C080;
+  --global-tip-block-bg: #343F44;
+  --global-tip-block-text: #D3C6AA;
+  --global-tip-block-title: #A7C080;
+  --global-warning-block: #DBBC7F;
+  --global-warning-block-bg: #3A3E38;
+  --global-warning-block-text: #D3C6AA;
+  --global-warning-block-title: #DBBC7F;
+  --global-danger-block: #E67E80;
+  --global-danger-block-bg: #3E3435;
+  --global-danger-block-text: #D3C6AA;
+  --global-danger-block-title: #E67E80;
+}
+
+// -----------------------------------------------------------------------------
+// Font Consistency: Authentic Apple Garamond (Self-Hosted) & Fallbacks
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('/assets/fonts/AppleGaramond.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('/assets/fonts/AppleGaramond-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('/assets/fonts/AppleGaramond-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('/assets/fonts/AppleGaramond-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Default typography across the site: EB Garamond (classic Renaissance proportions, open & readable)
+$retro-default-font: 'EB Garamond', Garamond, 'Georgia', 'Times New Roman', serif;
+
+// Display font used ONLY for the user's name: Apple Garamond
+$retro-name-font: 'Apple Garamond', 'EB Garamond', Garamond, 'Georgia', serif;
+
+// Monospace font for code: JetBrains Mono
+$retro-mono-font: 'JetBrains Mono', 'Fira Code', 'Courier New', Courier, monospace;
+
+body {
+  font-family: $retro-default-font !important;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+li {
+  font-family: $retro-default-font !important;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}
+
+span,
+a,
+b,
+strong,
+em {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// All headings and general titles default to EB Garamond
+h1, h2, h3, h4, h5, h6,
+.page-title,
+.post-title {
+  font-family: $retro-default-font !important;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.35rem; }
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+// Subpage post/page titles in EB Garamond
+.post-title {
+  font-family: $retro-default-font !important;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+// Name title on homepage: Apple Garamond ONLY for the name
+// Tarun Kumar bold (700), C S unbolded (400), uniform 2.4rem size
+.post-header:has(.desc) .post-title,
+.post-title:has(.font-weight-bold) {
+  font-family: $retro-name-font !important;
+  font-size: 2.4rem !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+
+  span,
+  a {
+    font-family: $retro-name-font !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+
+  .font-weight-bold,
+  b,
+  strong {
+    font-family: $retro-name-font !important;
+    font-weight: 700 !important;
+    font-size: inherit !important;
+  }
+}
+
+// Name in navbar on other pages: Apple Garamond ONLY for the name
+// Tarun Kumar bold (700), C S unbolded (400), uniform 1.35rem size
+.navbar-brand {
+  display: inline-block !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: $retro-name-font !important;
+  font-size: 1.35rem !important;
+  font-weight: 400 !important;
+  color: var(--global-text-color) !important;
+  text-decoration: none !important;
+  letter-spacing: -0.01em;
+
+  span,
+  a {
+    font-family: $retro-name-font !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+
+  .font-weight-bold,
+  b,
+  strong {
+    font-family: $retro-name-font !important;
+    font-weight: 700 !important;
+    font-size: inherit !important;
+    color: var(--global-text-color) !important;
+  }
+
+  &:hover {
+    color: var(--global-theme-color) !important;
+    
+    span,
+    .font-weight-bold,
+    b,
+    strong {
+      color: var(--global-theme-color) !important;
+    }
+  }
+}
+
+.font-weight-bold,
+b,
+strong {
+  font-weight: 700 !important;
+}
+
+.font-weight-lighter,
+.font-weight-light {
+  font-weight: 400 !important;
+}
+
+code, pre, kbd, samp {
+  font-family: $retro-mono-font !important;
+  font-size: 0.9em;
+}
+
+// -----------------------------------------------------------------------------
+// Retro Architectural Styling (No Rounded Corners — Crisp, Clean, Boxy)
+// -----------------------------------------------------------------------------
+
+// Global zero border-radius enforcement for authentic retro layout
+*,
+*::before,
+*::after {
+  border-radius: 0px !important;
+}
+
+// Retro Navbar
+.navbar {
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
+  background-color: var(--global-bg-color) !important;
+  border-bottom: 2px solid var(--global-divider-color) !important;
+  box-shadow: none !important;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  // Mobile Toggler Button
+  .navbar-toggler {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 6px 8px !important;
+    background-color: var(--global-card-bg-color) !important;
+    border: 1px solid var(--global-divider-color) !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    box-shadow: none !important;
+    outline: none !important;
+
+    .icon-bar {
+      display: block !important;
+      width: 20px !important;
+      height: 2px !important;
+      background-color: var(--global-text-color) !important;
+      margin: 2px 0 !important;
+      transition: all 0.2s ease;
+    }
+
+    &:focus,
+    &:hover {
+      outline: none !important;
+      border-color: var(--global-theme-color) !important;
+
+      .icon-bar {
+        background-color: var(--global-theme-color) !important;
+      }
+    }
+
+    &:not(.collapsed) {
+      border-color: var(--global-theme-color) !important;
+    }
+  }
+
+  // Desktop View (>= 576px)
+  @media (min-width: 576px) {
+    .navbar-toggler {
+      display: none !important;
+    }
+
+    .navbar-collapse {
+      display: flex !important;
+      justify-content: flex-end !important;
+      align-items: center !important;
+      flex-basis: auto !important;
+      width: auto !important;
+    }
+
+    .navbar-nav,
+    .navbar-nav.navbar-menu-list {
+      margin-left: auto !important;
+      display: inline-flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 6px !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+    }
+  }
+
+  // Mobile Phone View (< 576px)
+  @media (max-width: 575.98px) {
+    .navbar-collapse {
+      width: 100% !important;
+      flex-basis: 100% !important;
+
+      &:not(.show) {
+        display: none !important;
+      }
+
+      &.show {
+        display: block !important;
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.5rem !important;
+        margin-top: 0.5rem !important;
+        border-top: 1px solid var(--global-divider-color) !important;
+      }
+    }
+
+    .navbar-nav,
+    .navbar-nav.navbar-menu-list {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-end !important;
+      width: 100% !important;
+      gap: 4px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+
+      .nav-item {
+        width: 100% !important;
+        text-align: right !important;
+
+        .nav-link {
+          display: block !important;
+          padding: 7px 12px !important;
+          font-size: 1.15rem !important;
+          width: 100% !important;
+        }
+
+        &.active .nav-link {
+          background-color: var(--global-card-bg-color) !important;
+          border: 1px solid var(--global-divider-color) !important;
+        }
+      }
+
+      // Utility icons container on mobile
+      .toggle-container,
+      li:has(#search-toggle) {
+        display: inline-flex !important;
+        margin-top: 8px !important;
+      }
+    }
+  }
+}
+
+// Retro Navigation Links (Shared styles)
+.navbar-nav,
+.navbar-nav.navbar-menu-list {
+  margin-left: auto !important;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 6px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+
+  .nav-item {
+    margin: 0 !important;
+
+    .nav-link {
+      display: inline-block !important;
+      font-family: $retro-default-font !important;
+      font-size: 1.05rem !important;
+      font-weight: 500 !important;
+      color: var(--global-text-color) !important;
+      padding: 3px 8px !important;
+      border: 1px solid transparent !important;
+      background: transparent !important;
+      text-decoration: none !important;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        color: var(--global-theme-color) !important;
+        border-bottom: 1px solid var(--global-theme-color) !important;
+      }
+    }
+
+    // Active tab in retro boxed frame with subtle paper shadow
+    &.active .nav-link {
+      background-color: var(--global-card-bg-color) !important;
+      border: 1px solid var(--global-divider-color) !important;
+      color: var(--global-theme-color) !important;
+      font-weight: 700 !important;
+      box-shadow: 2px 2px 0px rgba(92, 106, 114, 0.18) !important;
+
+      &:hover {
+        background-color: var(--global-card-bg-color) !important;
+      }
+    }
+  }
+
+  // Retro Square Utility Buttons (Search & Theme Switcher)
+  #search-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0 !important;
+    margin-left: 12px !important; // Spaced away from the links
+    background-color: var(--global-card-bg-color) !important;
+    border: 1px solid var(--global-divider-color) !important;
+    box-shadow: 2px 2px 0px rgba(92, 106, 114, 0.18) !important;
+    color: var(--global-text-color) !important;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    // Single search icon only — no "ctrl k" text
+    .nav-link {
+      font-size: 0 !important;
+      line-height: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none !important;
+      background: transparent !important;
+
+      i {
+        font-size: 0.85rem !important;
+        line-height: 1 !important;
+        color: var(--global-text-color) !important;
+      }
+    }
+
+    &:hover {
+      background-color: var(--global-theme-color) !important;
+      border-color: var(--global-theme-color) !important;
+      color: var(--global-bg-color) !important;
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0px rgba(92, 106, 114, 0.18) !important;
+
+      .nav-link i {
+        color: var(--global-bg-color) !important;
+      }
+    }
+  }
+
+  .toggle-container {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-left: 6px !important;
+
+    #light-toggle {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 30px !important;
+      height: 30px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      transform: none !important;
+      background-color: var(--global-card-bg-color) !important;
+      border: 1px solid var(--global-divider-color) !important;
+      box-shadow: 2px 2px 0px rgba(92, 106, 114, 0.18) !important;
+      color: var(--global-text-color) !important;
+      font-size: 0.85rem !important;
+      cursor: pointer;
+      transition: all 0.1s ease;
+
+      // Inactive icons hidden by default
+      i {
+        display: none !important;
+        line-height: 1 !important;
+      }
+
+      &:hover {
+        background-color: var(--global-theme-color) !important;
+        border-color: var(--global-theme-color) !important;
+        color: var(--global-bg-color) !important;
+        transform: translate(1px, 1px);
+        box-shadow: 1px 1px 0px rgba(92, 106, 114, 0.18) !important;
+
+        i {
+          color: var(--global-bg-color) !important;
+        }
+      }
+    }
+  }
+}
+
+// Single active icon display for Theme Switcher:
+html[data-theme='light'] #light-toggle #light-toggle-dark,
+html:not([data-theme='dark']) #light-toggle #light-toggle-dark {
+  display: inline-block !important;
+  color: inherit !important;
+}
+
+html[data-theme='dark'] #light-toggle #light-toggle-light {
+  display: inline-block !important;
+  color: inherit !important;
+}
+
+// Clean Minimalist Cards & Showcase Items (No Cluttered Windows)
+.card,
+.post-preview {
+  position: relative !important;
+  background-color: var(--global-card-bg-color) !important;
+  border: 1px solid var(--global-divider-color) !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+  padding-top: 0 !important;
+  overflow: hidden !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease !important;
+
+  &::before {
+    display: none !important;
+  }
+
+  &:hover {
+    border-color: var(--global-theme-color) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  .card-body {
+    padding: 1.25rem !important;
+  }
+
+  .card-img-top {
+    border-radius: 0 !important;
+    border-bottom: 1px solid var(--global-divider-color) !important;
+  }
+}
+
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .post-preview {
+  border-color: var(--global-divider-color) !important;
+  box-shadow: none !important;
+
+  &::before {
+    display: none !important;
+  }
+
+  &:hover {
+    border-color: var(--global-theme-color) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  }
+}
+
+// Tables: Eliminate clunky grid boxes, keep clean & typographic
+table,
+.table {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+
+  th,
+  td {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0.6rem 0.75rem 0.6rem 0 !important;
+  }
+}
+
+.table-responsive {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// News & Announcements: Clean editorial timeline with hairline separators
+.news {
+  table {
+    border: none !important;
+
+    tr {
+      border-bottom: 1px solid var(--global-divider-color) !important;
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+    }
+
+    th {
+      font-family: $retro-mono-font !important;
+      font-size: 0.85rem !important;
+      font-weight: 500 !important;
+      color: var(--global-text-color) !important;
+      opacity: 0.7;
+      padding-right: 1.5rem !important;
+      white-space: nowrap;
+    }
+
+    td {
+      font-family: $retro-default-font !important;
+      font-size: 1.05rem !important;
+      line-height: 1.5 !important;
+    }
+  }
+}
+
+// Retro Buttons & Badges: Flat, sharp, no clumsy drop shadows
+.btn,
+.badge,
+.tag {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  border: 1px solid var(--global-divider-color) !important;
+  font-family: $retro-mono-font !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color) !important;
+    color: var(--global-theme-color) !important;
+    box-shadow: none !important;
+  }
+}
+
+// Profile More-Info (Email / Contact below photo)
+.profile .more-info {
+  margin-top: 10px;
+  text-align: center;
+  font-family: $retro-mono-font !important;
+  font-size: 0.8rem !important;
+  color: var(--global-text-color-light) !important;
+  line-height: 1.45 !important;
+
+  p {
+    font-family: $retro-mono-font !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 4px !important;
+    line-height: 1.45 !important;
+    color: var(--global-text-color-light) !important;
+    letter-spacing: 0.01em;
+  }
+}
