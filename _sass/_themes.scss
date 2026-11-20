@@ -689,49 +689,51 @@ table,
   }
 }
 
-// Homepage Bottom Social Icons: Sized cleanly & spaced neatly
+// Homepage Bottom Social Icons: Delicately small & cleanly spaced
 .social {
   text-align: center;
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 
   .contact-icons {
     display: inline-flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 12px !important;
+    gap: 8px !important;
+    font-size: 1.05rem !important;
 
     a {
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
-      font-size: 1.35rem !important;
+      font-size: 1.05rem !important;
       color: var(--global-text-color) !important;
       margin: 0 !important;
-      padding: 6px !important;
+      padding: 4px 6px !important;
       line-height: 1 !important;
       transition: color 0.15s ease, transform 0.15s ease !important;
 
       i,
-      svg {
-        font-size: 1.35rem !important;
-        width: 1.35rem !important;
-        height: 1.35rem !important;
+      svg,
+      .ai,
+      .fa-brands,
+      .fa-solid {
+        font-size: 1.05rem !important;
         line-height: 1 !important;
         vertical-align: middle !important;
       }
 
       &:hover {
         color: var(--global-theme-color) !important;
-        transform: translateY(-2px) !important;
+        transform: translateY(-1px) !important;
       }
     }
   }
 
   .contact-note {
-    font-size: 0.85rem !important;
+    font-size: 0.8rem !important;
     color: var(--global-text-color-light) !important;
-    margin-top: 0.5rem !important;
+    margin-top: 0.4rem !important;
   }
 }

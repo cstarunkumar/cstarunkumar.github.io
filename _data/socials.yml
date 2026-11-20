@@ -5,10 +5,6 @@
 cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
 email: tarunness@gmail.com # your email address
 linkedin_username: cstarunkumar # your LinkedIn username
-substack:
-  title: Substack
-  logo: fa-brands fa-substack
-  url: https://cstarunkumar.substack.com
 youtube_id: cstarunkumar # your YouTube handle or channel ID
 instagram_id: cstarunkumar # your Instagram username
 scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
