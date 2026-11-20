@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{\textbf{Computational Chemistry \& Molecular Modeling}}
+\author{C S Tarun Kumar}
+\date{November 20, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+Computational chemistry utilizes computer simulation to solve chemical problems, calculate molecular structures, and predict physical properties.
+
+\section{Key Approaches}
+\subsection{Molecular Mechanics (MM)}
+\begin{itemize}
+    \item Treats atoms as balls and bonds as springs (force field methods).
+    \item Fast and computationally inexpensive; ideal for large biomolecules.
+    \item Does not account for electronic transitions or bond formation/breaking.
+\end{itemize}
+
+\subsection{Electronic Structure Methods (Quantum Mechanics)}
+\begin{itemize}
+    \item \textbf{Ab Initio:} Solves the Schrödinger equation from first principles (Hartree-Fock, Post-HF methods like MP2, CCSD).
+    \item \textbf{Density Functional Theory (DFT):} Calculates electron density rather than multi-electron wavefunctions (e.g., B3LYP functional). Excellent balance of accuracy and computational cost.
+    \item \textbf{Semi-Empirical Methods:} Uses empirical parameters to approximate complex integrals (AM1, PM3).
+\end{itemize}
+
+\section{Practical Applications}
+\begin{itemize}
+    \item Drug discovery and protein-ligand docking.
+    \item Transition state analysis and reaction kinetics.
+    \item Spectroscopic property prediction (IR, NMR, UV-Vis).
+\end{itemize}
+
+\end{document}
